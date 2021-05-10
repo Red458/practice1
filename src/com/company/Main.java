@@ -1,7 +1,5 @@
 package com.company;
 
-import com.sun.org.apache.xpath.internal.operations.String;
-
 import java.util.Scanner;
 
 public class Main {
@@ -27,11 +25,9 @@ public class Main {
         System.out.println("1) Ver el nombre del curso");
         System.out.println("2) Ver el promedio general");
         System.out.println("3) Ver la lista de alumnos");
-        System.out.println("4) Ver la lista de alumnos aprobados");
-        System.out.println("5) Ver la lista de alumnos desaprobados");
-        System.out.println("6) Añadir un alumno");
-        System.out.println("7) Borrar un alumno");
-        System.out.println("8) Ver la lista de opciones");
+        System.out.println("4) Añadir un alumno");
+        System.out.println("5) Borrar un alumno");
+        System.out.println("6) Ver opciones");
         for (int i = 0; i > -1;) {
             System.out.printf("Ingrese la opcion que desea: ");
             option = scanner.nextInt();
@@ -45,10 +41,9 @@ public class Main {
                     System.out.println("El promedio general es " + grade1a.obtainGeneralAverage());
                     break;
                 case 3:
-                    System.out.println("1) Ver todos los alumnos");
-                    System.out.println("2) Ver todos los alumnos desaprobados");
-                    System.out.println("3) Ver todos los alumnos aprobados");
-
+                    for (int j = 0; j < stuList.length; j++) {
+                        System.out.println(stuList[j]);
+                    }
                     break;
                 case 4:
                     System.out.println("No");
@@ -63,7 +58,7 @@ public class Main {
                     System.out.println("3) Ver la lista de alumnos");
                     System.out.println("4) Añadir un alumno");
                     System.out.println("5) Borrar un alumno");
-                    System.out.println("6) Ver la lista de opciones");
+                    System.out.println("6) Ver opciones");
                     break;
                 case 0:
                     System.out.println("Cerrando el programa...");
